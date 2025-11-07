@@ -19,8 +19,6 @@ Laravel を使用して作成した体重管理アプリです。
 6. php artisan key:generate
 7. php artisan migrate
 
-![ER図](./table.svg)
-
 ## 実行環境
 - PHP 8.3.6
 - Laravel 8.83.8
@@ -28,7 +26,6 @@ Laravel を使用して作成した体重管理アプリです。
 
 ## ER図
 ![ER図](PiGLY.svg)
-
 
 ## URL
 - 開発環境：http://localhost/

@@ -1,4 +1,3 @@
-/* 基本設定 */
 body {
     font-family: "Noto Sans JP", sans-serif;
     background: #faf9fb;
@@ -7,7 +6,6 @@ body {
     color: #333;
 }
 
-/* ヘッダー */
 header {
     color: #d47fc5;
     display: flex;
@@ -37,7 +35,6 @@ header {
     margin: 0;
 }
 
-/* ボタン共通 */
 .btn-primary,
 .btn-secondary,
 .btn-add,
@@ -56,7 +53,6 @@ header {
     box-sizing: border-box;
 }
 
-/* ボタン詳細 */
 .btn-primary,
 .btn-add {
     background: linear-gradient(90deg, #b08cf5 0%, #f78fb3 100%);
@@ -84,7 +80,6 @@ header {
     box-shadow: 0 3px 6px rgba(212, 127, 197, 0.2);
 }
 
-/* 削除ボタン（赤） */
 .delete-red {
     background: none;
     border: none;
@@ -103,7 +98,6 @@ header {
     margin-top: 20px;
 }
 
-/* 目標/統計ボックス */
 .stats-box {
     display: flex;
     justify-content: space-around;
@@ -138,7 +132,6 @@ header {
     background: #999;
 }
 
-/* フィルター */
 .filter-container {
     display: flex;
     justify-content: space-between;
@@ -158,7 +151,6 @@ input[type="date"] {
     border-radius: 6px;
 }
 
-/* テーブル */
 .log-table {
     width: 90%;
     margin: 20px auto;
@@ -186,7 +178,6 @@ input[type="date"] {
     background: #fdf7fb;
 }
 
-/* ページネーション */
 .pagination,
 .simple-pagination {
     display: flex;
@@ -225,7 +216,6 @@ input[type="date"] {
     box-shadow: 0 2px 5px rgba(212, 127, 197, 0.2);
 }
 
-/* モーダル */
 .modal {
     position: fixed;
     inset: 0;
@@ -240,7 +230,6 @@ input[type="date"] {
     display: none;
 }
 
-/* ✅ モーダル専用フォーム */
 .modal .modal-form {
     background: #fff;
     padding: 25px;
@@ -252,7 +241,6 @@ input[type="date"] {
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* ✅ 通常ページのフォーム */
 .page-form {
     background: #fff;
     padding: 30px;
@@ -262,10 +250,8 @@ input[type="date"] {
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* フォーム要素 */
 .modal-form label {
     margin-top: 20px;
-    /* ←余白UP */
     font-weight: 500;
     color: #555;
 }
@@ -308,12 +294,10 @@ input[type="date"] {
     color: #ddd;
 }
 
-/* ✅ ボタンと要素の間の余白をつける */
 .center-buttons {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 12px;
     margin-top: 25px;
-    /* ← 余白追加 */
 }
