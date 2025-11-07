@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+    background: linear-gradient(90deg, rgba(183, 187, 255, 1), rgba(255, 247, 216, 1) 33%, rgba(246, 190, 232, 1) 76%, rgba(243, 170, 196, 1));
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-card {
+    background: rgba(255, 255, 255);
+    padding: 40px 80px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 380px;
+    text-align: center;
+}
+
+.title {
+    font-size: 36px;
+    color: #d47fc5;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.step {
+    font-size: 12px;
+    color: #777;
+    margin-bottom: 25px;
+}
+
+form {
+    text-align: left;
+}
+
+label {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 4px;
+    display: block;
+}
+
+input {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+button {
+    width: 100%;
+    background: linear-gradient(90deg, #b08cf5 0%, #f78fb3 100%);
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 0;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+.login-link {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 13px;
+    color: #6a5acd;
+    text-decoration: none;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+}
+
+.error-message {
+    color: #d9534f;
+    font-size: 13px;
+    margin-top: -12px;
+    margin-bottom: 12px;
+}

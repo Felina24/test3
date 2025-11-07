@@ -1,0 +1,319 @@
+/* 基本設定 */
+body {
+    font-family: "Noto Sans JP", sans-serif;
+    background: #faf9fb;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* ヘッダー */
+header {
+    color: #d47fc5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 40px;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    position: relative;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-right form {
+    margin: 0;
+}
+
+/* ボタン共通 */
+.btn-primary,
+.btn-secondary,
+.btn-add,
+.btn-delete {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 38px;
+    padding: 6px 14px;
+    font-size: 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.2s;
+    box-sizing: border-box;
+}
+
+/* ボタン詳細 */
+.btn-primary,
+.btn-add {
+    background: linear-gradient(90deg, #b08cf5 0%, #f78fb3 100%);
+    border: none;
+    color: #fff;
+}
+
+.btn-primary:hover,
+.btn-add:hover {
+    opacity: 0.65;
+}
+
+.btn-secondary {
+    background: #faf9fb;
+    border: 1px solid #999;
+    color: #999;
+}
+
+.btn-secondary:hover {
+    opacity: 0.65;
+}
+
+.btn-add {
+    padding: 8px 18px;
+    box-shadow: 0 3px 6px rgba(212, 127, 197, 0.2);
+}
+
+/* 削除ボタン（赤） */
+.delete-red {
+    background: none;
+    border: none;
+    color: red;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.delete-red:hover {
+    opacity: 0.8;
+}
+
+.delete-area {
+    display: flex;
+    justify-content: right;
+    margin-top: 20px;
+}
+
+/* 目標/統計ボックス */
+.stats-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #fff;
+    border-radius: 16px;
+    padding: 25px 0;
+    width: 85%;
+    margin: 30px auto;
+    box-shadow: 0 4px 12px rgba(212, 127, 197, 0.1);
+    text-align: center;
+}
+
+.stat-item {
+    flex: 1;
+}
+
+.stat-item p {
+    color: #999;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.stat-item h2 {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.divider {
+    width: 1px;
+    height: 50px;
+    background: #999;
+}
+
+/* フィルター */
+.filter-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto 15px auto;
+}
+
+.filter-form {
+    display: flex;
+    gap: 10px;
+}
+
+input[type="date"] {
+    padding: 6px 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+/* テーブル */
+.log-table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.log-table th {
+    color: #000;
+    font-weight: 600;
+    padding: 12px;
+    border-bottom: 2px solid #f3ddec;
+}
+
+.log-table td {
+    border-bottom: 1px solid #f4f4f4;
+    padding: 10px;
+    text-align: center;
+}
+
+.log-table tr:hover {
+    background: #fdf7fb;
+}
+
+/* ページネーション */
+.pagination,
+.simple-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    margin: 25px 0;
+}
+
+.pagination a,
+.pagination span {
+    background: #fff;
+    border: 1px solid #d47fc5;
+    color: #d47fc5;
+    padding: 6px 10px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.pagination .active span {
+    background: #d47fc5;
+    color: #fff;
+}
+
+.pagination a:hover {
+    background: #eac6e2;
+    color: #fff;
+}
+
+.simple-pagination span.active {
+    background: linear-gradient(90deg, #b08cf5 0%, #f78fb3 100%);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-weight: 500;
+    box-shadow: 0 2px 5px rgba(212, 127, 197, 0.2);
+}
+
+/* モーダル */
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+/* ✅ モーダル専用フォーム */
+.modal .modal-form {
+    background: #fff;
+    padding: 25px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ✅ 通常ページのフォーム */
+.page-form {
+    background: #fff;
+    padding: 30px;
+    width: 420px;
+    margin: 100px auto;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* フォーム要素 */
+.modal-form label {
+    margin-top: 20px;
+    /* ←余白UP */
+    font-weight: 500;
+    color: #555;
+}
+
+.modal-form input,
+.modal-form textarea {
+    width: 100%;
+    margin-top: 6px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+.input-with-unit {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.unit {
+    color: #888;
+    font-size: 14px;
+}
+
+.required {
+    color: red;
+    font-size: 12px;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+    margin: 2px 0 6px 0;
+}
+
+::placeholder {
+    color: #ddd;
+}
+
+/* ✅ ボタンと要素の間の余白をつける */
+.center-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 25px;
+    /* ← 余白追加 */
+}
