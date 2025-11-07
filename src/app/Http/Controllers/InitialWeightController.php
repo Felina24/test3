@@ -38,27 +38,23 @@ class InitialWeightController extends Controller
             return redirect()->route('register.step1')->withErrors('セッションが切れました。最初からやり直してください。');
         }
 
-        // 🧍‍♀️ユーザー作成
         $user = User::create([
             'name' => $registerData['name'],
             'email' => $registerData['email'],
             'password' => $registerData['password'],
         ]);
 
-        // 🎯 目標体重を登録
         WeightTarget::create([
             'user_id' => $user->id,
             'target_weight' => $request->goal_weight,
         ]);
 
-        // ⚖️ 現在体重を登録（本日のログとして）
         WeightLog::create([
             'user_id' => $user->id,
             'date' => now()->format('Y-m-d'),
             'weight' => $request->current_weight,
         ]);
 
-        // ログインしてリダイレクト
         Auth::login($user);
         Session::forget('register_data');
 
