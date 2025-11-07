@@ -1,0 +1,13 @@
+# Ignore MySQL data (docker)
+docker/mysql/data/
+
+# Ignore logs
+*.log
+
+# Ignore editor settings
+.vscode/
+.idea/
+
+# Ignore OS temporary files
+.DS_Store
+Thumbs.db
